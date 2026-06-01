@@ -10,6 +10,8 @@ M.S. Cybersecurity Management | ISC2 CC | Google Cybersecurity Certificate | Com
 | Room | Category | Difficulty | Tools Used | Status |
 |------|----------|------------|------------|--------|
 | [Offensive Security Intro](./offensive-security-intro.md) | Pre-Security | Easy | dirb | ✅ Complete |
+| [Defensive Security Intro](./defensive-security-intro.md) | Pre-Security | Easy | SOC Dashboard, Firewall Manager | ✅ Complete |
+
 
 ## Skills Demonstrated
 - Web application reconnaissance
