@@ -48,7 +48,7 @@ Alert management platforms used by SOC teams:
 
 ![Events and Alerts dashboard showing True Positives, False Positives, and Archive columns](Screen%20Shot%202026-06-01%20at%206.35.04%20PM.png)
 
-![Alert Management Platforms table and L1 Role in Alert Triage](Screen%20Shot%202026-06-01%20at%206.27.23%20PM.png)
+![Alert Management Platforms table and L1 Role in Alert Triage](Screen%20Shot%202026-06-01%20at%206.38.59%20PM.png)
 
 ### Task 3 -- L1 Role in Alert Triage
 
@@ -76,7 +76,7 @@ Acted as CISO of TrySecureMe, a multinational company with 7 simultaneous securi
 - **SIEM unavailable due to storage limit** → **SOC Engineer**
 - **FIN7 threat group actively targeting company** -- analyze tactics → **Alice** (Threat Researcher)
 
-![TrySecureMe final challenge drag-and-drop role assignment](Screen%20Shot%202026-06-01%20at%206.38.59%20PM.png)
+![TrySecureMe final challenge drag-and-drop role assignment](Screen%20Shot%202026-06-01%20at%206.27.23%20PM.png)
 
 ---
 
