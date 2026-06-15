@@ -30,7 +30,7 @@ L1 analysts may deal with real cyberattacks and breaches that require immediate 
 - Apply the knowledge to triage alerts in a simulated environment
 - Feel more confident in the SOC Simulator and during SAL1 certification
 
-![SOC L1 Alert Reporting room introduction](Screen_Shot_2026-06-15_at_4_01_58_PM.png)
+![SOC L1 Alert Reporting room introduction](Screen%20Shot%202026-06-15%20at%204.01.58%20PM.png)
 
 ---
 
@@ -38,7 +38,7 @@ L1 analysts may deal with real cyberattacks and breaches that require immediate 
 
 Continuing work in the SOC dashboard, this time focused on writing professional reports and practicing alert escalation.
 
-![SOC dashboard access granted for Alert Reporting room](Screen_Shot_2026-06-15_at_4_02_35_PM.png)
+![SOC dashboard access granted for Alert Reporting room](Screen%20Shot%202026-06-15%20at%204.02.35%20PM.png)
 
 ---
 
@@ -60,13 +60,68 @@ The **Five Ws** framework is the standard for writing alert reports:
 - **Where** -- Which device, IP, or website was involved in the alert
 - **Why** -- The most important W: the reasoning behind the final verdict
 
-![Five Ws framework and example alert report checklist](Screen_Shot_2026-06-15_at_4_06_38_PM.png)
+![Five Ws framework and example alert report checklist](Screen%20Shot%202026-06-15%20at%204.06.38%20PM.png)
 
-![Alert report purposes table](Screen_Shot_2026-06-15_at_4_06_48_PM.png)
+![Alert report purposes table](Screen%20Shot%202026-06-15%20at%204.06.48%20PM.png)
 
 ---
 
-### Task 4 -- Alert Escalation Guide
+### Task 4 -- Alert Escalation and Communication
+
+**Alert Escalation** -- If a True Positive alert requires deeper investigation or remediation beyond L1 scope, it must be escalated to an L2 analyst following agreed procedures. The alert report is what allows L2 to quickly pick up context without starting from scratch.
+
+**Communication** -- SOC analysts may also need to coordinate with other departments during or after analysis -- for example, confirming with IT whether admin privileges were legitimately granted, or contacting HR about a newly hired employee.
+
+The alert pipeline flows: **L1 (noise filtering + escalation)** → **L2 (deep investigation + IR if needed)** → **DFIR (incident handling + forensics)**
+
+![Alert escalation and communication overview with L1-L2-DFIR pipeline diagram](Screen%20Shot%202026-06-15%20at%204.07.48%20PM.png)
+
+**Answers:**
+- What is the process of passing suspicious alerts to an L2 analyst for review? **Alert Escalation**
+- What is the process of formally describing alert details and findings? **Alert Reporting**
+
+![Task 4 answers -- Alert Escalation and Alert Reporting confirmed](Screen%20Shot%202026-06-15%20at%204.07.58%20PM.png)
+
+---
+
+### Task 5 -- Phishing Alert Lab
+
+Accessed the SOC dashboard to investigate two active alerts and write a proper Five Ws report for the phishing case.
+
+**SOC Dashboard -- Active Alerts:**
+
+| Time | Alert | Severity | Status |
+|------|-------|----------|--------|
+| Mar 27th 2025 at 19:56 | Spike of Domain Discovery Commands | Medium | Awaiting action |
+| Mar 27th 2025 at 19:25 | Email Marked as Phishing after Delivery | Medium | Awaiting action |
+| Mar 27th 2025 at 19:10 | Web Scanning of Corporate Resources | Low | In Progress (E.Fleming L2) |
+| Mar 27th 2025 at 18:30 | Sensitive Document Share to External | Medium | In Progress (E.Fleming L2) |
+| Mar 27th 2025 at 18:02 | Fast Beaconing to Untrusted Domain | High | Closed -- False Positive (S.Todd L1) |
+
+![SOC dashboard showing 5 active alerts](Screen%20Shot%202026-06-15%20at%204.15.53%20PM.png)
+
+**Phishing Alert -- Email Marked as Phishing after Delivery:**
+
+- **Sender:** Microsoft Support `<support@microsoft.com>`
+- **Recipient:** Eddie Huffman, IT Manager `<e.huffman@tryhackme.thm>`
+- **Subject:** Important Update: Microsoft Teams Pricing Increase
+- **Body keywords:** 600% price increase; urgent notice; download the report; read the details
+- **Security checks:** SPF/Fail; DKIM/Fail
+- **Attached URLs:** None
+- **Attached files:** REPORT.rar
+- **Verdict:** True Positive
+
+**Five Ws Analyst Comment submitted:**
+
+> On March 27, 2025 at 19:25, Eddie Huffman (IT Manager) received a phishing email spoofing Microsoft Support (support@microsoft.com) with subject "Important Update: Microsoft Teams Pricing Increase." The email failed both SPF and DKIM checks, confirming sender spoofing. It contained urgency-driven language around a fabricated 600% price increase and a suspicious attachment (REPORT.rar) designed to lure the recipient into downloading malware. The email was flagged post-delivery by automated analysis. The attachment was not executed; the email has been quarantined pending further investigation.
+
+**Flag received after correct Five Ws report:** `THM{nice_attempt_faking_microsoft_support}`
+
+![Phishing alert flag -- THM{nice_attempt_faking_microsoft_support}](Screen%20Shot%202026-06-15%20at%204.19.03%20PM.png)
+
+---
+
+### Task 6 -- Escalation Guide
 
 After making a verdict and writing a report, L1 must decide whether to escalate. Escalate the alert if:
 
@@ -81,19 +136,17 @@ After making a verdict and writing a report, L1 must decide whether to escalate.
 3. If escalation is required, assign the alert **to your L2 on shift**
 4. L2 receives a notification and starts from the alert report
 
-L2 will then deep investigate, validate the True Positive, communicate with other departments if needed, and initiate a formal Incident Response process for major incidents.
-
-![Escalation guide showing L1-to-L2 escalation flow with phishing credential rotation example](Screen_Shot_2026-06-15_at_4_19_46_PM.png)
+![Escalation guide showing L1-to-L2 escalation flow](Screen%20Shot%202026-06-15%20at%204.19.46%20PM.png)
 
 **Answers:**
 - Who is your current L2 in the SOC dashboard? **E.Fleming**
 - Flag received after correctly escalating the phishing alert to L2: **THM{good_job_escalating_your_first_alert}**
 
-![Task 4 answers -- E.Fleming and escalation flag confirmed](Screen_Shot_2026-06-15_at_4_19_59_PM.png)
+![Task 6 answers -- E.Fleming and escalation flag confirmed](Screen%20Shot%202026-06-15%20at%204.19.59%20PM.png)
 
 ---
 
-### Task 5 -- SOC Communication
+### Task 7 -- SOC Communication
 
 In critical scenarios, L1 analysts must know how to communicate effectively even when standard procedures break down. The SOC team relies on **Crisis Communication** procedures for these cases.
 
@@ -111,58 +164,19 @@ In critical scenarios, L1 analysts must know how to communicate effectively even
 3. L2 initiates Incident Response with the DFIR team if needed
 4. L2 contacts Team Managers and legal/PR teams if the incident requires broader response
 
-![SOC communication cases and L2 communication flow diagram](Screen_Shot_2026-06-15_at_4_20_37_PM.png)
+![SOC communication cases and L2 communication flow diagram](Screen%20Shot%202026-06-15%20at%204.20.37%20PM.png)
 
 **Answers:**
 - Should you first try to contact your manager in case of a critical threat? **Nay**
 - Should you immediately contact your L2 if you think you missed the attack? **Yea**
 
-![Task 5 answers confirmed -- Nay and Yea](Screen_Shot_2026-06-15_at_4_28_22_PM.png)
+![Task 7 answers confirmed -- Nay and Yea](Screen%20Shot%202026-06-15%20at%204.28.22%20PM.png)
 
 ---
 
-### Task 6 -- Alert Lab: Phishing and Domain Discovery
+### Task 8 -- Domain Discovery Alert Lab
 
-Investigated two active alerts in the SOC dashboard and wrote Five Ws reports for both.
-
-**SOC Dashboard -- Active Alerts:**
-
-| Time | Alert | Severity | Status |
-|------|-------|----------|--------|
-| Mar 27th 2025 at 19:56 | Spike of Domain Discovery Commands | Medium | Awaiting action |
-| Mar 27th 2025 at 19:25 | Email Marked as Phishing after Delivery | Medium | Awaiting action |
-| Mar 27th 2025 at 19:10 | Web Scanning of Corporate Resources | Low | In Progress (E.Fleming L2) |
-| Mar 27th 2025 at 18:30 | Sensitive Document Share to External | Medium | In Progress (E.Fleming L2) |
-| Mar 27th 2025 at 18:02 | Fast Beaconing to Untrusted Domain | High | Closed -- False Positive (S.Todd L1) |
-
-![SOC dashboard showing 5 active alerts](Screen_Shot_2026-06-15_at_4_15_53_PM.png)
-
----
-
-**Alert 1 -- Email Marked as Phishing after Delivery**
-
-- **Sender:** Microsoft Support `<support@microsoft.com>`
-- **Recipient:** Eddie Huffman, IT Manager `<e.huffman@tryhackme.thm>`
-- **Subject:** Important Update: Microsoft Teams Pricing Increase
-- **Body keywords:** 600% price increase; urgent notice; download the report; read the details
-- **Security checks:** SPF/Fail; DKIM/Fail
-- **Attached URLs:** None
-- **Attached files:** REPORT.rar
-- **Verdict:** True Positive
-
-**Five Ws Analyst Comment:**
-
-> On March 27, 2025 at 19:25, Eddie Huffman (IT Manager) received a phishing email spoofing Microsoft Support (support@microsoft.com) with subject "Important Update: Microsoft Teams Pricing Increase." The email failed both SPF and DKIM checks, confirming sender spoofing. It contained urgency-driven language around a fabricated 600% price increase and a suspicious attachment (REPORT.rar) designed to lure the recipient into downloading malware. The email was flagged post-delivery by automated analysis. The attachment was not executed; the email has been quarantined pending further investigation.
-
-![Phishing alert edit view showing Five Ws comment submitted](Screen_Shot_2026-06-15_at_4_20_37_PM.png)
-
-**Flag received after correct Five Ws report:** `THM{nice_attempt_faking_microsoft_support}`
-
-![Phishing alert flag -- THM{nice_attempt_faking_microsoft_support}](Screen_Shot_2026-06-15_at_4_19_03_PM.png)
-
----
-
-**Alert 2 -- Spike of Domain Discovery Commands**
+Investigated the second active alert: **Spike of Domain Discovery Commands**.
 
 - **Host:** DMZ-MSEXCHANGE-2013 (Windows Server 2012 R2)
 - **User:** NT AUTHORITY\SYSTEM
@@ -172,28 +186,28 @@ Investigated two active alerts in the SOC dashboard and wrote Five Ws reports fo
 - **Grandparent process:** `C:\Windows\System32\inetsrv\w3wp.exe`
 - **Verdict:** True Positive -- escalated to E.Fleming (L2)
 
-The process chain reveals a web shell compromise: `w3wp.exe` (IIS) spawned `revshell.exe` from a public directory, which then launched `cmd.exe` to run Active Directory reconnaissance commands. This is a live post-exploitation scenario on the Exchange server.
+The process chain reveals a web shell compromise: `w3wp.exe` (IIS worker) spawned `revshell.exe` from a public directory, which then launched `cmd.exe` to run Active Directory reconnaissance commands. This is a live post-exploitation scenario on the Exchange server.
 
-**Five Ws Analyst Comment:**
+**Five Ws Analyst Comment submitted:**
 
 > On March 27, 2025 at 19:56, NT AUTHORITY\SYSTEM on DMZ-MSEXCHANGE-2013 executed AD discovery commands (whoami, net group, nltest) via cmd.exe spawned from revshell.exe, which was launched by IIS worker process w3wp.exe, indicating an active web shell compromise and post-exploitation domain reconnaissance. Escalated to L2.
 
-![Spike of Domain Discovery alert details showing process chain](Screen_Shot_2026-06-15_at_4_26_50_PM.png)
+![Spike of Domain Discovery alert details showing process chain](Screen%20Shot%202026-06-15%20at%204.26.50%20PM.png)
 
-![Edit alert view for Spike of Domain Discovery Commands](Screen_Shot_2026-06-15_at_4_26_41_PM.png)
+![Edit alert view for Spike of Domain Discovery Commands](Screen%20Shot%202026-06-15%20at%204.26.41%20PM.png)
 
 **Flag received after correct escalation:** `THM{looks_like_webshell_via_old_exchange}`
 
-![Domain discovery escalation flag -- THM{looks_like_webshell_via_old_exchange}](Screen_Shot_2026-06-15_at_4_29_16_PM.png)
+![Domain discovery escalation flag -- THM{looks_like_webshell_via_old_exchange}](Screen%20Shot%202026-06-15%20at%204.29.16%20PM.png)
 
-**Task 6 answers confirmed:**
+**All task answers confirmed:**
 - Which user email leaked the sensitive document? **m.boslan@tryhackme.thm**
 - Who is the sender of the suspicious phishing email? **support@microsoft.com**
 - Flag after writing good Five Ws report: **THM{nice_attempt_faking_microsoft_support}**
 
-![Task 6 all answers confirmed correct](Screen_Shot_2026-06-15_at_4_30_12_PM.png)
+![All task answers confirmed correct](Screen%20Shot%202026-06-15%20at%204.30.12%20PM.png)
 
-![Task 6 completion confirmation](Screen_Shot_2026-06-15_at_4_30_23_PM.png)
+![Room completion confirmation](Screen%20Shot%202026-06-15%20at%204.30.23%20PM.png)
 
 ---
 
