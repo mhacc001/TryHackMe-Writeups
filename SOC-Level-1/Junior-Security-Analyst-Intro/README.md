@@ -71,8 +71,6 @@ Switched to the IP Hunter tab and ran a reputation lookup on `221.181.185.159`. 
 
 Navigated to the Escalation tab and escalated the confirmed malicious IP to Senior Analyst **Will Griffin** for deeper investigation while proceeding with containment.
 
-![Escalation confirmation -- alert sent to Will Griffin](Screen%20Shot%202026-06-01%20at%2010.38.13%20AM.png)
-
 ### Task 6 -- Block the IP on the Firewall
 
 Navigated to the Firewall tab and added a block rule for `221.181.185.159`. The rule was applied successfully and a congratulations popup appeared with the flag.
