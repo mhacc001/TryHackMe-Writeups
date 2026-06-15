@@ -75,7 +75,7 @@ Navigated to the Escalation tab and escalated the confirmed malicious IP to Seni
 
 Navigated to the Firewall tab and added a block rule for `221.181.185.159`. The rule was applied successfully and a congratulations popup appeared with the flag.
 
-![Firewall block rule applied for 221.181.185.159 with flag revealed](Screen%20Shot%202026-06-01%20at%206.38.46%20PM.png)
+![Firewall block rule applied for 221.181.185.159 with flag revealed](Screen%20Shot%202026-06-01%20at%206.38.59%20PM.png)
 
 ---
 
