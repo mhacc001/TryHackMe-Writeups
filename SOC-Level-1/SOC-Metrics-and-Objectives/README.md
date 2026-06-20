@@ -49,7 +49,7 @@ Reference SLA values: MTTD = 5 minutes, MTTA = 10 minutes, MTTR = 60 minutes, wi
 - An employee was lured into running data stealer malware: the "Connection to Redline Stealer C2" alert arrived after 12 minutes, an L1 analyst moved it to In Progress 10 minutes later, after 6 more minutes it was escalated to L2, who spent 35 minutes cleaning the malware. Provide MTTD, MTTA, and MTTR via comma.
   **12,10,51** -- MTTD = 12 (time to alert), MTTA = 10 (time to start triage), MTTR = 10 + 6 + 35 = 51 (time from alert received to full mitigation).
 
-![Task 3 Answers](Screen%20Shot%202026-06-20%20at%2011.36.58%20AM.png)
+![Task 3 Answers](Screen%20Shot%202026-06-20%20at%2011.38.14%20AM.png)
 
 ## Task 4 -- Improving Metrics
 
@@ -62,7 +62,7 @@ Pairs each problematic metric threshold with concrete remediation steps: too muc
 - Should all SOC roles work together to keep metrics improving? (Yea/Nay)
   **Yea** -- improving FPR, MTTD, MTTA, and MTTR all require coordination across L1, L2, and detection engineering, not just one role acting alone.
 
-![Task 4 Answers](Screen%20Shot%202026-06-20%20at%2011.38.34%20AM.png)
+![Task 4 Answers](Screen%20Shot%202026-06-20%20at%2011.39.26%20AM.png)
 
 ## Task 5 -- Practice Scenarios
 
