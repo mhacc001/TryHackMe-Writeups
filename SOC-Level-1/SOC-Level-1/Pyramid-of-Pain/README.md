@@ -20,9 +20,9 @@ Analyzed a VirusTotal-style report for the hash `b8ef959a9176aef07fdca8705254a16
 Sales_Receipt 5606.xls
 ```
 
-![VirusTotal detection results](Screen_Shot_2026-07-18_at_3_31_34_PM.png)
+![VirusTotal detection results](Screen%20Shot%202026-07-18%20at%203.31.34%20PM.png)
 
-![Task 2 correct answer](Screen_Shot_2026-07-18_at_3_32_21_PM.png)
+![Task 2 correct answer](Screen%20Shot%202026-07-18%20at%203.32.21%20PM.png)
 
 Also covered how trivially an attacker can change a file's hash by appending a single string to the file, demonstrated with `Get-FileHash` before and after an `echo` append.
 
@@ -42,7 +42,7 @@ Reviewed an ANY.RUN sandbox report for a Sodinokibi/REvil ransomware sample (`so
 craftingalegacy.com
 ```
 
-![Task 3 correct answers](Screen_Shot_2026-07-18_at_3_35_03_PM.png)
+![Task 3 correct answers](Screen%20Shot%202026-07-18%20at%203.35.03%20PM.png)
 
 Covered Fast Flux as a technique adversaries use to rotate IP addresses behind a single domain to evade IP-based blocking.
 
@@ -72,7 +72,7 @@ Punycode attack
 https://tryhackme.com/
 ```
 
-![Task 4 correct answers](Screen_Shot_2026-07-18_at_3_38_15_PM.png)
+![Task 4 correct answers](Screen%20Shot%202026-07-18%20at%203.38.15%20PM.png)
 
 Covered Punycode/IDN homograph attacks (example: `adıdas.de` resolving to `xn--addas-o4a.de`) and how to preview shortened URLs safely by appending `+` before visiting.
 
@@ -97,9 +97,9 @@ G_jugk.exe
 9
 ```
 
-![VirusTotal 9 vendors flagged malicious](Screen_Shot_2026-07-18_at_3_41_41_PM.png)
+![VirusTotal 9 vendors flagged malicious](Screen%20Shot%202026-07-18%20at%203.41.41%20PM.png)
 
-![Task 5 correct answers](Screen_Shot_2026-07-18_at_3_42_23_PM.png)
+![Task 5 correct answers](Screen%20Shot%202026-07-18%20at%203.42.23%20PM.png)
 
 ---
 
@@ -117,7 +117,7 @@ User-Agent
 6
 ```
 
-![Task 6 correct answers](Screen_Shot_2026-07-18_at_3_44_34_PM.png)
+![Task 6 correct answers](Screen%20Shot%202026-07-18%20at%203.44.34%20PM.png)
 
 ---
 
@@ -135,7 +135,7 @@ Fuzzy Hashing
 context triggered piecewise hashes
 ```
 
-![Task 7 correct answers](Screen_Shot_2026-07-18_at_3_46_32_PM.png)
+![Task 7 correct answers](Screen%20Shot%202026-07-18%20at%203.46.32%20PM.png)
 
 ---
 
@@ -153,7 +153,7 @@ Reached the apex of the pyramid. TTPs (Tactics, Techniques & Procedures) cover t
 Cobalt Strike
 ```
 
-![Task 8 correct answers](Screen_Shot_2026-07-18_at_3_48_44_PM.png)
+![Task 8 correct answers](Screen%20Shot%202026-07-18%20at%203.48.44%20PM.png)
 
 ---
 
@@ -170,14 +170,14 @@ Deployed the attached static site and matched each prompt to its correct tier of
 | These addresses can be used to identify the infrastructure an attacker is using for their campaign | IP Addresses |
 | These artefacts can present themselves as C2 traffic, for example | Network/Host Artifacts |
 
-![Pyramid matching completed](Screen_Shot_2026-07-18_at_3_52_05_PM.png)
+![Pyramid matching completed](Screen%20Shot%202026-07-18%20at%203.52.05%20PM.png)
 
 **Flag:**
 ```
 THM{PYRAMIDS_COMPLETE}
 ```
 
-![Task 9 flag confirmed](Screen_Shot_2026-07-18_at_3_52_18_PM.png)
+![Task 9 flag confirmed](Screen%20Shot%202026-07-18%20at%203.52.18%20PM.png)
 
 ---
 
