@@ -1,0 +1,69 @@
+# Shadow Trace
+
+## Overview
+
+This room focused on analyzing a suspicious file, uncovering embedded indicators of compromise, and tracing alert activity back to malicious infrastructure. It combined alert triage against a static site with static analysis of a suspicious binary (windows-update.exe) to pull out identifying details, IOCs, and a hidden flag.
+
+## Task 3: Alerts Analysis
+
+This task involved reviewing alerts in an interactive exercise and identifying the malicious URLs and file activity tied to specific triggering processes.
+
+**Q: Can you identify the malicious URL from the trigger by the process powershell.exe?**
+```
+https://tryhatme.com/dev/main.exe
+```
+
+**Q: Can you identify the malicious URL from the alert triggered by chrome.exe?**
+```
+https://reallysecureupdate.tryhatme.com/update.exe
+```
+
+**Q: What's the name of the file saved in the alert triggered by chrome.exe?**
+```
+test.txt
+```
+
+![Alerts Analysis](Screen_Shot_2026-07-28_at_10_17_11_PM.png)
+
+## Binary Analysis: windows-update.exe
+
+This task moved into static analysis of a suspicious binary to extract file metadata, embedded network indicators, and hidden data.
+
+**Q: What is the architecture of the binary file windows-update.exe?**
+```
+64-bit
+```
+
+**Q: What is the hash (sha-256) of the file windows-update.exe?**
+```
+b2a88de3e3bcfae4a4b38fa36e884c586b5cb2c2c283e71fba59efdb9ea64bfc
+```
+
+**Q: Identify the URL within the file to use it as an IOC**
+```
+http://tryhatme.com/update/security-update.exe
+```
+
+**Q: With the URL identified, can you spot a domain that can be used as an IOC?**
+```
+responses.tryhatme.com
+```
+
+**Q: Input the decoded flag from the suspicious domain**
+```
+THM{you_g0t_some_IOCs_friend}
+```
+
+**Q: What library related to socket communication is loaded by the binary?**
+```
+WS2_32.dll
+```
+
+![Binary Analysis](Screen_Shot_2026-07-28_at_10_18_55_PM.png)
+
+## Key Takeaways
+
+- Alert triage means tying a triggering process (powershell.exe, chrome.exe) back to the exact URL or file it touched, not just flagging the process itself as suspicious.
+- A single binary can carry multiple usable IOCs at once: hash, embedded URL, and derived domain, each useful at a different stage of blocking or hunting.
+- WS2_32.dll loading is a strong signal a binary handles raw socket communication, which is worth flagging even before deeper behavioral analysis.
+- Domains tied to malicious infrastructure can carry encoded payloads (like the flag here), so decoding suspicious strings pulled from domains or file strings is a standard step in IOC extraction.
