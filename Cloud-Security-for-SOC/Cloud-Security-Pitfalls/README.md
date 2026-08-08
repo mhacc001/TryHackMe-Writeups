@@ -22,7 +22,7 @@ IaaS
 SaaS
 ```
 
-![Task 2 answers](./Screenshot%202026-08-08%20at%205.20.36%20PM.png)
+![Task 2 answers](./Screen%20Shot%202026-08-08%20at%205.20.36%20PM.png)
 
 ## Task 3 - Security of the Cloud
 
@@ -38,7 +38,7 @@ Yea
 Nay
 ```
 
-![Task 3 answers](./Screenshot%202026-08-08%20at%205.28.26%20PM.png)
+![Task 3 answers](./Screen%20Shot%202026-08-08%20at%205.28.26%20PM.png)
 
 ## Task 4 - Security in the Cloud
 
@@ -54,7 +54,7 @@ Nay
 Paid Logs
 ```
 
-![Task 4 answers](./Screenshot%202026-08-08%20at%205.28.58%20PM.png)
+![Task 4 answers](./Screen%20Shot%202026-08-08%20at%205.28.58%20PM.png)
 
 ## Task 5 - What to Protect and Monitor
 
@@ -70,7 +70,7 @@ Workloads
 CWPP
 ```
 
-![Task 5 answers](./Screenshot%202026-08-08%20at%205.29.35%20PM.png)
+![Task 5 answers](./Screen%20Shot%202026-08-08%20at%205.29.35%20PM.png)
 
 ## Exercise 1 - Choose the Correct Cloud Service Model
 
@@ -95,7 +95,7 @@ Sorted the nine card descriptions into IaaS, PaaS, and SaaS.
 THM{flag_as_a_service!}
 ```
 
-![Exercise 1 completed](./Screenshot%202026-08-08%20at%205.36.32%20PM.png)
+![Exercise 1 completed](./Screen%20Shot%202026-08-08%20at%205.36.32%20PM.png)
 
 ## Exercise 2 - Choose the Responsible Person in IaaS
 
@@ -116,7 +116,7 @@ Sorted the seven responsibility statements into You vs IaaS Provider, based on t
 THM{ready_for_cloud_migration!}
 ```
 
-![Exercise 2 completed](./Screenshot%202026-08-08%20at%205.39.54%20PM.png)
+![Exercise 2 completed](./Screen%20Shot%202026-08-08%20at%205.39.54%20PM.png)
 
 ## Key Takeaways
 
